@@ -1,7 +1,6 @@
 from room import Room
 from player import Player
 from item import Item
-# from color import Colors
 import textwrap
 
 
@@ -127,11 +126,11 @@ def travel(command, directions):
     else:
         print(unrecognized_str)
 # HUD for player
-def hud(player):
-    print("\n*-*-*-*-*-*-*-*-*-*-*//*-*-*-*-*-*-*-*-*-*-*//*-*-*-*-*-*-*-*-*-*-*//*-*-*-*-*-*-*-*")
-    print(textwrap.dedent(Colors.RED + "\nHUD DISPLAY" + Colors.END))
-    print("Player: " + Colors.BOLD + Colors.PURPLE + f"{player.name}" + Colors.END + Colors.BOLD + "::: Current Room: " + Colors.BOLD + Colors.PURPLE + f"{player.current_room.name}" + Colors.END + Colors.BOLD + "::: Inventory Count: " + Colors.PURPLE + f"{player.items}\n" + Colors.BLUE)
-    print(textwrap.dedent(Colors.DARKCYAN + player.current_room.description + Colors.END))
+#def hud(player):
+ #   print("\n*-*-*-*-*-*-*-*-*-*-*//*-*-*-*-*-*-*-*-*-*-*//*-*-*-*-*-*-*-*-*-*-*//*-*-*-*-*-*-*-*")
+  #  print(textwrap.dedent(Colors.RED + "\nHUD DISPLAY" + Colors.END))
+  #  print("Player: " + Colors.BOLD + Colors.PURPLE + f"{player.name}" + Colors.END + Colors.BOLD + "::: Current Room: " + Colors.BOLD + Colors.PURPLE + f"{player.current_room.name}" + Colors.END + Colors.BOLD + "::: Inventory Count: " + Colors.PURPLE + f"{player.items}\n" + Colors.BLUE)
+  #s  print(textwrap.dedent(Colors.DARKCYAN + player.current_room.description + Colors.END))
 def print_move_options(current_room):
     if current_room == "Outside Cave Entrance":
         return "Move: [n] North [q] Quit: " 
@@ -148,7 +147,7 @@ directions = ["n", "w", "s", "e"]
 flag = True
 while flag:    
     room = p.current_room
-    hud(p)
+    #hud(p)
     # print(room.name)
     print(textwrap.dedent("\n*-*-*-*-*-*-*-*-*-*-*//*-*-*-*-*-*-*-*-*-*-*//*-*-*-*-*-*-*-*-*-*-*"))
     m = input("==>").lower()
